@@ -1,0 +1,180 @@
+.beginer{
+    width: 100%;
+    height: 760px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+p{
+    font-size: 30px;
+    line-height: 32px;
+    color: #e9e2bf;
+    text-shadow: 0 3px 6px rgb(0 0 0 / 84%);
+    margin: 0 auto 36px;
+    max-width: 80%;
+
+}
+.abc{
+    margin-top: -1px;
+}
+.image-bg{
+    position: absolute;
+    z-index: -1;
+}
+.word{
+    margin-top: -1px ;
+    background-image: url(https://ru-wotp.wgcdn.co/static/5.96.0_9090e7/wotp_static/img/about_game/frontend/scss/about-info/img/bg-d.webp);
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 1000px;
+}
+
+.word > h2{
+    font-size: 145px;
+    color: #e9e2bf;
+    font-weight: bold;
+}
+
+.sec{
+    margin-top: 200px;
+    padding-top: 25px;
+    text-align: center;
+    width: 100%;
+    height: 180px;
+    background-image: url(https://ru-wotp.wgcdn.co/static/5.96.0_9090e7/wotp_static/img/about_game/frontend/scss/about-info/img/ribbon.webp);
+}
+
+.sec h3{
+    color: palegoldenrod !important;
+}
+.before-scrin{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.before-scrin > h1{
+    color: white;
+}
+
+.before-scrin > p{
+    color: palegoldenrod;
+    font-size: 28px;
+}
+
+.scrin{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.nationality {
+    background-image: url(https://ru-wotp.wgcdn.co/static/5.96.0_9090e7/wotp_static/img/core/frontend/scss/common/blocks/about-technic/img/bg-nation-d.jpg);
+    background-size: 100%;
+    width: 100%;
+    height: 1000px;
+    text-align: center;    
+}
+
+.nationality >h1{
+    color: ivory;
+    padding-top: 50px;
+}
+.item1{
+    background-image: url(https://ru-wotp.wgcdn.co/static/5.96.0_9090e7/wotp_static/img/core/frontend/scss/common/blocks/about-technic/img/flags/ussr.webp);
+    background-size: 800px;
+    background-repeat: no-repeat;
+}
+.item2{
+    background-image: url(https://ru-wotp.wgcdn.co/static/5.96.0_9090e7/wotp_static/img/core/frontend/scss/common/blocks/about-technic/img/flags/germany.webp);
+    background-size: 800px;
+    background-repeat: no-repeat;
+}
+.item3{
+    background-image: url(https://ru-wotp.wgcdn.co/static/5.96.0_9090e7/wotp_static/img/core/frontend/scss/common/blocks/about-technic/img/flags/usa.webp);
+    background-size: 800px;
+    background-repeat: no-repeat;
+}
+.item4{
+    background-image: url(https://ru-wotp.wgcdn.co/static/5.96.0_9090e7/wotp_static/img/core/frontend/scss/common/blocks/about-technic/img/flags/france.webp);
+    background-size: 800px;
+    background-repeat: no-repeat;
+}
+.item5{
+    background-image: url(https://ru-wotp.wgcdn.co/static/5.96.0_9090e7/wotp_static/img/core/frontend/scss/common/blocks/about-technic/img/flags/uk.webp);
+    background-size: 800px;
+    background-repeat: no-repeat;
+}
+.item6{
+    background-image: url(https://ru-wotp.wgcdn.co/static/5.96.0_9090e7/wotp_static/img/core/frontend/scss/common/blocks/about-technic/img/flags/czech.webp);
+    background-size: 700px;
+    background-repeat: no-repeat;
+}
+.item7{
+    background-image: url(https://ru-wotp.wgcdn.co/static/5.96.0_9090e7/wotp_static/img/core/frontend/scss/common/blocks/about-technic/img/flags/china.webp);
+    background-size: 800px;
+    background-repeat: no-repeat;
+}
+.item8{
+    background-image: url(https://ru-wotp.wgcdn.co/static/5.96.0_9090e7/wotp_static/img/core/frontend/scss/common/blocks/about-technic/img/flags/japan.webp);
+    background-size: 800px;
+    background-repeat: no-repeat;
+}
+.item9{
+    background-image: url(https://ru-wotp.wgcdn.co/static/5.96.0_9090e7/wotp_static/img/core/frontend/scss/common/blocks/about-technic/img/flags/sweden.webp);
+    background-size: 700px;
+    background-repeat: no-repeat;
+}
+.item10{
+    background-image: url(https://ru-wotp.wgcdn.co/static/5.96.0_9090e7/wotp_static/img/core/frontend/scss/common/blocks/about-technic/img/flags/poland.webp);
+    background-size: 700px;
+    background-repeat: no-repeat;
+}
+.item11{
+    background-image: url(https://ru-wotp.wgcdn.co/static/5.96.0_9090e7/wotp_static/img/core/frontend/scss/common/blocks/about-technic/img/flags/italy.webp);
+    background-size: 700px;
+    background-repeat: no-repeat;
+}
+.types{
+    width: 100%;
+    height: 1000px;
+}
+.medium{
+    width: 100%;
+    height: 100%;
+    background-image: url(https://ru-wotp.wgcdn.co/static/5.96.0_9090e7/wotp_static/img/core/frontend/scss/common/blocks/about-technic/img/tanks-bg/mediumtank-d.webp);
+    background-size: 100%;
+}
+.heavy{
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-image: url(https://ru-wotp.wgcdn.co/static/5.96.0_9090e7/wotp_static/img/core/frontend/scss/common/blocks/about-technic/img/tanks-bg/heavytank-d.webp);
+}
+.pt{
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-image: url(https://ru-wotp.wgcdn.co/static/5.96.0_9090e7/wotp_static/img/core/frontend/scss/common/blocks/about-technic/img/tanks-bg/at-spg-d.webp);
+}
+
+.art{
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-image: url(https://ru-wotp.wgcdn.co/static/5.96.0_9090e7/wotp_static/img/core/frontend/scss/common/blocks/about-technic/img/tanks-bg/spg-d.webp);
+}
+.lt{
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-image: url(https://ru-wotp.wgcdn.co/static/5.96.0_9090e7/wotp_static/img/core/frontend/scss/common/blocks/about-technic/img/tanks-bg/lighttank-d.webp);
+}

@@ -1,0 +1,10 @@
+.angar{
+    width: 100%;
+    height: 900px;
+    background-image: url(https://ru-wotp.wgcdn.co/static/5.97.0_abe061/wotp_static/img/tankopedia_new/frontend/scss/tankopedia-detail/img/hangar-bg.webp);
+    background-size: cover;
+}
+span{
+    font-size: 25px;
+    color: white;
+}

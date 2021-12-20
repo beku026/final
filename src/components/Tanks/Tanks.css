@@ -1,0 +1,8 @@
+.card:hover{
+    box-shadow: 3px 4px 5px 5px darkgray;
+    transition: 0.3s;
+}
+.c{
+    background-image: url(https://t4.ftcdn.net/jpg/02/81/65/35/360_F_281653591_LZmmypLdZaFsqOsJBsxilj3OYdINzh2B.jpg);
+    background-size: cover;
+}
