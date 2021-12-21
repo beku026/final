@@ -15,7 +15,7 @@ const Tanks = ({item}) => {
   return (
     <>
         <div className="m-4 card">
-          <Card style={{ width: "25rem", border: "none"}}>
+          <Card style={{ width: "24rem", border: "none"}}>
             <Card.Img
               variant="top"
               src={item.image} 
@@ -46,7 +46,8 @@ const Tanks = ({item}) => {
                 <Link to={`/edit/${item.id}`}><EditOutlined style={{color: 'orangered'}} className="m-3"/></Link>              
               ):null}
               <Link to={`/details/${item.id}`}><Button variant="secondary" className="m-3" >Подробнее</Button></Link>
-              <ShoppingCartOutlined style={{color: 'red'}} />
+              {email? <ShoppingCartOutlined style={{color: 'red'}} /> : null}
+              
             </Card.Body>
           </Card>          
         </div>

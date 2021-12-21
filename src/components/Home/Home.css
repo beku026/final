@@ -78,9 +78,9 @@ p{
 
 .nationality {
     background-image: url(https://ru-wotp.wgcdn.co/static/5.96.0_9090e7/wotp_static/img/core/frontend/scss/common/blocks/about-technic/img/bg-nation-d.jpg);
-    background-size: 100%;
+    background-size: cover;
     width: 100%;
-    height: 1000px;
+    height: 950px;
     text-align: center;    
 }
 
@@ -151,30 +151,30 @@ p{
     width: 100%;
     height: 100%;
     background-image: url(https://ru-wotp.wgcdn.co/static/5.96.0_9090e7/wotp_static/img/core/frontend/scss/common/blocks/about-technic/img/tanks-bg/mediumtank-d.webp);
-    background-size: 100%;
+    background-size: cover;
 }
 .heavy{
     width: 100%;
     height: 100%;
-    background-size: 100%;
+    background-size: cover;
     background-image: url(https://ru-wotp.wgcdn.co/static/5.96.0_9090e7/wotp_static/img/core/frontend/scss/common/blocks/about-technic/img/tanks-bg/heavytank-d.webp);
 }
 .pt{
     width: 100%;
     height: 100%;
-    background-size: 100%;
+    background-size: cover;
     background-image: url(https://ru-wotp.wgcdn.co/static/5.96.0_9090e7/wotp_static/img/core/frontend/scss/common/blocks/about-technic/img/tanks-bg/at-spg-d.webp);
 }
 
 .art{
     width: 100%;
     height: 100%;
-    background-size: 100%;
+    background-size: cover;
     background-image: url(https://ru-wotp.wgcdn.co/static/5.96.0_9090e7/wotp_static/img/core/frontend/scss/common/blocks/about-technic/img/tanks-bg/spg-d.webp);
 }
 .lt{
     width: 100%;
     height: 100%;
-    background-size: 100%;
+    background-size: cover;
     background-image: url(https://ru-wotp.wgcdn.co/static/5.96.0_9090e7/wotp_static/img/core/frontend/scss/common/blocks/about-technic/img/tanks-bg/lighttank-d.webp);
 }

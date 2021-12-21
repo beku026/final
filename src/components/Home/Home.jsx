@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Home.css";
 import Photo from "../image/logo-2.png";
 import { Carousel } from "react-bootstrap";
 const Home = () => {
+
+  function sayHello(){
+     alert("Доброго времени суток! Чтобы совершать покупки вам необходимо зарегистрироваться)")
+
+  }
+  useEffect(()=>{
+    setTimeout(sayHello, 2000);
+    return
+  },[])
+
   return (
     <>
       <section style={{ position: "absolute", zIndex: "-1", width: '100%' }}>

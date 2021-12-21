@@ -37,5 +37,12 @@
       color: orange;
   }
   
+.shop-icon{
+    color:white;
+    font-size: 30px;
+}
+.shop-icon:hover{
+    color: orange;
+}
 
 

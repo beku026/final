@@ -97,8 +97,8 @@ const Footer = () => {
         </div>
         <div styele={{marginTop: '150px'}}>
             <h3 className="footer_text">How to contact us?</h3>
-            <h5 className="footer_text">Email:  tarieltairov1@gmail.com  </h5>
-            <h5 className="footer_text">Phone number:  <a href="tel:+996704135830" style={{textDecoration: 'none'}}>+996704135830</a></h5>
+            <h5 className="footer_text">Email:  <span style={{color: "#3399ff", fontSize: '22px'}}>tarieltairov1@gmail.com</span>  </h5>
+            <h5 className="footer_text">Phone number:  <a href="tel:+996704135830" style={{textDecoration: 'none', color: "#3399ff"}}>+996704135830</a></h5>
         </div>
       </div>
     </div>

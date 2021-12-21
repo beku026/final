@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import "./Header.css";
 import Logo from "../image/logo-3.png";
 import { useAuth } from "../../context/AuthContext";
+import { ShoppingCartOutlined } from "@ant-design/icons/lib/icons";
 const Header = () => {
   const location = useLocation();
 
@@ -41,20 +42,6 @@ const Header = () => {
           <img className="logo" width="80px" src={Logo} alt="" />
         </Link>
         <>
-          {/* {nav_items.map((item) => (
-            <Link
-              to={item.link}
-              style={{ textDecoration: "none" }}
-              className={
-                location.pathname === item.link
-                  ? "navbar__item-active"
-                  : "navbar__item"
-              }
-            >
-              {item.title}
-            </Link>
-          ))} */}
-
           {email === "tarieltairov1@gmail.com" ? (
             <Link
               className={
@@ -63,29 +50,34 @@ const Header = () => {
                   : "navbar__item"
               }
               to="/add"
-             >
+            >
               ДОБАВИТЬ ТАНК
             </Link>
           ) : null}
 
-          
-            <Link
+          <Link
             className={
               location.pathname === "/tanks"
                 ? "navbar__item-active"
                 : "navbar__item"
             }
             to="/tanks"
-           >
+          >
             ТАНКИ
           </Link>
-         
         </>
 
-        <div className=" d-flex justify-content-center align-items-center">
+        <div
+          style={{ width: "200px" }}
+          className=" d-flex justify-content-between align-items-center"
+        >
+          <ShoppingCartOutlined className="shop-icon" style={{color: "white"}}/>
           {email ? (
             <Link to="/auth" style={{ textDecoration: "none" }}>
-              <div className="div-reg  d-flex justify-content-center align-items-center" onClick={handleLogout}>
+              <div
+                className="div-reg  d-flex justify-content-center align-items-center"
+                onClick={handleLogout}
+              >
                 <div className="reg">Выйти</div>
               </div>
             </Link>

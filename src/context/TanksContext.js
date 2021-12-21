@@ -8,7 +8,8 @@ const API = "http://localhost:8000/tanks";
 const INIT_STATE = {
     tanks: [],
     edit: null,
-    more: null
+    more: null, 
+    total: 0
 }
 
 const reducer = (state = INIT_STATE, action) => {
@@ -17,6 +18,7 @@ const reducer = (state = INIT_STATE, action) => {
             return {
                 ...state,
                 tanks: action.payload.data,
+                total: action.payload.headers["x-total-count"],
             }
         case "GET_EDIT":
             return {
@@ -51,7 +53,7 @@ const TanksContextProvider = ({ children }) => {
     }
 
     async function getTanks() {
-        let res = await axios.get(API);
+        let res = await axios.get(`${API}${window.location.search}`);
         dispatch({
             type: "GET_TANKS",
             payload: res,
@@ -82,6 +84,7 @@ const TanksContextProvider = ({ children }) => {
                 tanks: state.tanks,
                 edit: state.edit,
                 more: state.more,
+                total: state.total,
                 getTanks,
                 createTank,
                 deleteTanks,
