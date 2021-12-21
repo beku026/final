@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { TanksContext } from "../../context/TanksContext";
+import CommentList from "../Commentarii/CommentList";
 import "./Details.css";
 
 const Details = () => {
@@ -19,6 +20,7 @@ const Details = () => {
   return (
     <>
       {tank ? (
+        <>
         <div className="angar">
 
           <div
@@ -56,6 +58,8 @@ const Details = () => {
             </div>
           </div>
           </div>
+        <CommentList/>
+        </>
       ) : (
         <h1>loading</h1>
       )}

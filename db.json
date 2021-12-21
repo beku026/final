@@ -1,4 +1,30 @@
 {
+  "comments": [
+    {
+      "word": "hello",
+      "id": 1
+    },
+    {
+      "word": "the best tanks",
+      "id": 8
+    },
+    {
+      "word": "😍💥",
+      "id": 9
+    },
+    {
+      "word": "asxasx",
+      "id": 10
+    },
+    {
+      "word": "asxasx",
+      "id": 11
+    },
+    {
+      "word": "фчфыс",
+      "id": 12
+    }
+  ],
   "tanks": [
     {
       "name": "Т-100 ЛТ",

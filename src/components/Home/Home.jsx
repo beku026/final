@@ -6,7 +6,6 @@ const Home = () => {
 
   function sayHello(){
      alert("Доброго времени суток! Чтобы совершать покупки вам необходимо зарегистрироваться)")
-
   }
   useEffect(()=>{
     setTimeout(sayHello, 2000);
