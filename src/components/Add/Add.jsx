@@ -12,6 +12,7 @@ const Add = () => {
         image: '',
         price: '',
         description: '',
+        comments: ''
     })  
 
     const{createTank}= useContext(TanksContext)

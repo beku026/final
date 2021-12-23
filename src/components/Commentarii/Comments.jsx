@@ -5,16 +5,15 @@ import {
   LikeOutlined,
 } from "@ant-design/icons/lib/icons";
 import { Tooltip } from "antd";
-import React, { useContext, useState } from "react";
-import { useAuth } from "../../context/AuthContext";
+import React, { useContext, useEffect, useState } from "react";
 import { commentContext } from "../../context/commentsContext";
-import moment from 'moment';
+import moment from "moment";
 import "./Comments.css";
-const Comments = ({ item }) => {
+
+import axios from "axios";
+
+const Comments = ({ item, id }) => {
   const { deleteComment } = useContext(commentContext);
-  const {
-    user: { email },
-  } = useAuth();
 
   const [likes, setLikes] = useState(0);
   const [dislikes, setDislikes] = useState(0);
@@ -37,18 +36,20 @@ const Comments = ({ item }) => {
       style={{
         display: "flex",
         justifyContent: "space-between",
-        alignItems:'center',
+        alignItems: "center",
         width: "100%",
         height: "100px",
-        marginBottom: "50px"
+        marginBottom: "50px",
       }}
     >
       <div style={{ height: "100%" }}>
-        <span style={{ color: "red", fontSize: "18px" }}>{email}</span>
-        <Tooltip title={moment().format('YYYY-MM-DD HH:mm:ss')}>
-          <span style={{ color: "grey", fontSize: "18px" }} >{'    '+moment().fromNow()}</span>
+        <img width="50px" src="https://joeschmoe.io/api/v1/random" alt="" />
+        <Tooltip title={moment().format("YYYY-MM-DD HH:mm:ss")}>
+          <span style={{ color: "grey", fontSize: "18px" }}>
+            {"    " + moment().fromNow()}
+          </span>
         </Tooltip>
-        <h5 style={{ color: "black" }}>{item.word}</h5>
+        <h5 style={{ color: "black" }}>{item.newComment.word}</h5>
         <div>
           <Tooltip key="comment-basic-like" title="Like">
             <span onClick={like}>
@@ -83,7 +84,7 @@ const Comments = ({ item }) => {
           fontSize: "18px",
           borderRadius: "5px",
         }}
-        onClick={() => deleteComment(item.id)}
+        onClick={() => deleteComment(item.id, id)}
       >
         delete
       </button>

@@ -1,4 +1,4 @@
-import React, { useReducer} from "react";
+import React, { useReducer } from "react";
 import axios from "axios";
 
 export const commentContext = React.createContext();
@@ -19,23 +19,23 @@ const reducer = (state = INIT_STATE, action) => {
 const CommentContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
-  async function createComment(newComment) {
-    await axios.post(COMMENTS_API, newComment);
-    getComments();
+  async function createComment(newComment, tanksId) {
+    await axios.post(COMMENTS_API, {newComment, tankId: tanksId});
+    getComments(tanksId);
   }
-  async function getComments() {
-    let result = await axios.get(COMMENTS_API);
+  async function getComments(tanksId) {
+    let result = await axios.get(COMMENTS_API + `/?tankId=${tanksId}`);
     dispatch({
       type: "GET_COMMENTS",
       payload: result,
     });
   }
 
-  async function deleteComment(id) {
+  async function deleteComment(id, tanksId) {
     await axios.delete(`${COMMENTS_API}/${id}`);
-    getComments();
+    getComments(tanksId);
   }
- 
+
 
   return (
     <commentContext.Provider

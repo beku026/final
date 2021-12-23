@@ -9,17 +9,23 @@ import TanksContextProvider from "./context/TanksContext";
 import AuthContextProvider from "./context/AuthContext";
 import Routing from "./Routing";
 import CommentContextProvider from "./context/commentsContext";
+import CartContextProvider from "./context/cartContext";
+import FavouriteContextProvider from "./context/favouritesContext";
 const App = () => {
   return (
     <div>
       <AuthContextProvider>
         <TanksContextProvider>
           <CommentContextProvider>
-            <BrowserRouter>
-              <Header />
-              <Routing />
-              <Footer />
-            </BrowserRouter>
+            <CartContextProvider>
+              <FavouriteContextProvider>
+                <BrowserRouter>
+                  <Header />
+                  <Routing />
+                  <Footer />
+                </BrowserRouter>
+              </FavouriteContextProvider>
+            </CartContextProvider>
           </CommentContextProvider>
         </TanksContextProvider>
       </AuthContextProvider>

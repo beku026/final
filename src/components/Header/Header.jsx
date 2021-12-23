@@ -1,10 +1,16 @@
-import React from "react";
-import { Container, Navbar, Button } from "react-bootstrap";
+import React, { useContext, useEffect } from "react";
+import { Container, Navbar } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
 import "./Header.css";
 import Logo from "../image/logo-3.png";
 import { useAuth } from "../../context/AuthContext";
-import { ShoppingCartOutlined } from "@ant-design/icons/lib/icons";
+import {
+  HeartOutlined,
+  ShoppingCartOutlined,
+} from "@ant-design/icons/lib/icons";
+import { Badge } from "antd";
+import { cartContext } from "../../context/cartContext";
+import { favouriteContext } from "../../context/favouritesContext";
 const Header = () => {
   const location = useLocation();
 
@@ -13,18 +19,16 @@ const Header = () => {
     user: { email },
   } = useAuth();
 
-  // const nav_items = [
-  //   {
-  //     title: "TАНКИ",
-  //     link: "/tanks",
-  //     id: 2,
-  //   },
-  //   {
-  //     title: "ДОБАВИТЬ ТАНК",
-  //     link: "/add",
-  //     id: 3,
-  //   },
-  // ];
+  const { getCart, cartLength } = useContext(cartContext);
+  useEffect(() => {
+    getCart();
+  }, []);
+
+  const { getFavourite, favouriteLength } = useContext(favouriteContext);
+  useEffect(() => {
+    getFavourite();
+  }, []);
+
   return (
     <Navbar
       variant="light"
@@ -68,10 +72,24 @@ const Header = () => {
         </>
 
         <div
-          style={{ width: "200px" }}
+          style={{ width: "250px" }}
           className=" d-flex justify-content-between align-items-center"
         >
-          <ShoppingCartOutlined className="shop-icon" style={{color: "white"}}/>
+          <Link to="/cart">
+            <Badge count={+cartLength}>
+              <ShoppingCartOutlined
+                className="shop-icon"
+                style={{ color: "white" }}
+              />
+            </Badge>
+          </Link>
+
+          <Link to="/favourites">
+            <Badge count={+favouriteLength}>
+              <HeartOutlined className="shop-icon" style={{ color: "white" }} />
+            </Badge>
+          </Link>
+
           {email ? (
             <Link to="/auth" style={{ textDecoration: "none" }}>
               <div

@@ -2,8 +2,10 @@ import React from 'react';
 import { Navigate, Route, Routes } from 'react-router';
 import Add from './components/Add/Add';
 import Login from './components/Auth/Login';
+import Cart from './components/Cart/Cart';
 import Details from './components/Details/Details';
 import Edit from './components/Edit/Edit';
+import Favourites from './components/Favourites/Favourites';
 import Home from './components/Home/Home';
 import TanksList from './components/TanksList/TanksList';
 import { useAuth } from './context/AuthContext';
@@ -23,16 +25,29 @@ const Routing = () => {
         },
         {
           link: 'edit/:id',
-          element: <Edit />
+          element: <Edit />,
+          id:3
         },
         {
           link: 'details/:id',
-          element: <Details />
+          element: <Details />,
+          id: 4
         },
         {
             link: '/auth',
-            element: <Login/>
-        }
+            element: <Login/>,
+            id: 5
+        },
+        {
+          link: "/cart",
+          element: <Cart />,
+          id: 6,
+        },
+        {
+          link: "/favourites",
+          element: <Favourites />,
+          id: 7,
+        },
       ]
     
       let admin = [

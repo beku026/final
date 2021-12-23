@@ -7,6 +7,7 @@ import { Pagination } from "antd";
 import Filter from "../Filter/Filter";
 
 const TanksList = () => {
+  
   const { getTanks, tanks, total } = useContext(TanksContext);
   const [searchParams, setSearchParams] = useSearchParams();
   const [type, setType]=useState([])
@@ -81,7 +82,7 @@ const TanksList = () => {
       >
         { tanks.map((item) => (
           <Tanks key={item.id} item={item} />
-        ))}
+          ))}
       </div>
 
       <div className="d-flex justify-content-center">

@@ -13,7 +13,7 @@ const Filter = ({ type, setType }) => {
       onChange={(e) => setType(e)}
       style={{ width: "200px", fontSize: '20px' }}
       mode="multiple"
-      placeholder="Filter by type"
+      placeholder="По типу"
     >
       {tanks.map((item) =>(
         <Option value={item.type} key={item.id}>

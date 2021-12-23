@@ -5,6 +5,13 @@ import CommentList from "../Commentarii/CommentList";
 import "./Details.css";
 
 const Details = () => {
+  function sayHello(){
+    alert("Доброго времени суток! Внизу вы можете оставить свой отзыв/комментарий)")
+ }
+ useEffect(()=>{
+   setTimeout(sayHello, 2000);
+   return
+ },[])
   const { getMore, more } = useContext(TanksContext);
   const { id } = useParams();
   const [tank, setTank] = useState({});
@@ -58,7 +65,7 @@ const Details = () => {
             </div>
           </div>
           </div>
-        <CommentList/>
+        <CommentList id={tank.id}/>
         </>
       ) : (
         <h1>loading</h1>

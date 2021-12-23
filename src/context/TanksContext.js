@@ -45,7 +45,7 @@ const TanksContextProvider = ({ children }) => {
     }
 
     async function getMore(id) {
-        let res = await axios.get(`${API}/${id}`)
+        let res = await axios.get(`${API}/${id}?_embed=comments`)
         dispatch({
             type: 'GET_MORE',
             payload: res
