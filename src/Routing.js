@@ -8,7 +8,9 @@ import Edit from './components/Edit/Edit';
 import Favourites from './components/Favourites/Favourites';
 import Home from './components/Home/Home';
 import TanksList from './components/TanksList/TanksList';
-import { useAuth } from './context/AuthContext';
+import { useAuth } from './context/authContext';
+import Pay from "./components/Pay/Pay";
+import Invoic from './components/Invoic/Invoic';
 
 const Routing = () => {
     const {user} = useAuth()
@@ -47,6 +49,16 @@ const Routing = () => {
           link: "/favourites",
           element: <Favourites />,
           id: 7,
+        },
+        {
+          link: "/pay",
+          element: <Pay />,
+          id: 8,
+        },
+        {
+          link: "/invoic",
+          element: <Invoic />,
+          id: 9,
         },
       ]
     

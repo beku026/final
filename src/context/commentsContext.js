@@ -19,8 +19,8 @@ const reducer = (state = INIT_STATE, action) => {
 const CommentContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
-  async function createComment(newComment, tanksId) {
-    await axios.post(COMMENTS_API, {newComment, tankId: tanksId});
+  async function createComment(newComment, tanksId, createdAtMs) {
+    await axios.post(COMMENTS_API, {newComment, tankId: tanksId, createdAtMs});
     getComments(tanksId);
   }
   async function getComments(tanksId) {

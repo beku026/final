@@ -6,9 +6,9 @@ import {
   ShoppingCartOutlined,
 } from "@ant-design/icons/lib/icons";
 import React, { useContext, useEffect, useState } from "react";
-import { Card, Button } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { useAuth } from "../../context/AuthContext";
+import { useAuth } from "../../context/authContext";
 import { TanksContext } from "../../context/TanksContext";
 import { Rate } from "antd";
 import "./Tanks.css";

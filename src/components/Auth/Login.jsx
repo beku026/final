@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useAuth } from "../../context/AuthContext";
+import { useAuth } from "../../context/authContext";
 import "./Login.css";
 const Login = () => {
   const {
@@ -16,6 +16,7 @@ const Login = () => {
     passwordError,
     authWithGoogle,
   } = useAuth();
+  // console.log(email)
   return (
         <section className="login">
           <div className="login-container">

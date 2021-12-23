@@ -6,7 +6,7 @@ import 'antd/dist/antd.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import TanksContextProvider from "./context/TanksContext";
-import AuthContextProvider from "./context/AuthContext";
+import AuthContextProvider from "./context/authContext";
 import Routing from "./Routing";
 import CommentContextProvider from "./context/commentsContext";
 import CartContextProvider from "./context/cartContext";

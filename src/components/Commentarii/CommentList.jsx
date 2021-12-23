@@ -3,21 +3,27 @@ import React, { useContext, useEffect, useState } from "react";
 import { commentContext } from "../../context/commentsContext";
 import Comments from "../Commentarii/Comments";
 import "./Comments.css";
+import { useAuth } from "../../context/authContext";
+
 
 const CommentList = ({ id }) => {
+  const { user: { email } } = useAuth()
   const { getComments, comments, createComment } = useContext(commentContext);
   useEffect(() => {
     getComments(id);
   }, [id]);
   const [newComment, setNewComment] = useState({
     word: "",
-  });
+  }); 
 
   function handleValues(e) {
+    const createdAtMs = Date.now()
     let values = {
       ...newComment,
       [e.target.name]: e.target.value,
+      createdAtMs,
       tanksId: id,
+      email
     };
     setNewComment(values);
   }
@@ -27,14 +33,15 @@ const CommentList = ({ id }) => {
       alert("Вы еще ничего не написали!");
       return;
     } else {
-      createComment(newComment, id);
+      
+      createComment(newComment, id );
     }
   }
   return (
     <div
       style={{
         width: "100%",
-        height: "400px",
+        height: "600px",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",

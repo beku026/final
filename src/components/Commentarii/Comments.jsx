@@ -9,10 +9,14 @@ import React, { useContext, useEffect, useState } from "react";
 import { commentContext } from "../../context/commentsContext";
 import moment from "moment";
 import "./Comments.css";
-
-import axios from "axios";
+import { timeSince } from "../helpers/calcTimeLeft";
+import { useAuth } from "../../context/authContext";
 
 const Comments = ({ item, id }) => {
+  const {
+    user: { email },
+  } = useAuth();
+
   const { deleteComment } = useContext(commentContext);
 
   const [likes, setLikes] = useState(0);
@@ -38,18 +42,50 @@ const Comments = ({ item, id }) => {
         justifyContent: "space-between",
         alignItems: "center",
         width: "100%",
-        height: "100px",
-        marginBottom: "50px",
+        height: "150px",
+        marginBottom: "100px",
       }}
     >
-      <div style={{ height: "100%" }}>
-        <img width="50px" src="https://joeschmoe.io/api/v1/random" alt="" />
-        <Tooltip title={moment().format("YYYY-MM-DD HH:mm:ss")}>
-          <span style={{ color: "grey", fontSize: "18px" }}>
-            {"    " + moment().fromNow()}
-          </span>
-        </Tooltip>
-        <h5 style={{ color: "black" }}>{item.newComment.word}</h5>
+      <div
+        style={{ height: "100%", width: "100%" }}
+        className="d-flex flex-column justify-content-between"
+      >
+        <div
+          className="d-flex  justify-content-start"
+          style={{ width: "100%" }}
+        >
+          <img width="50px" src="https://joeschmoe.io/api/v1/random" alt="" />
+          <div
+            className="d-flex align-items-center justify-content-between"
+            style={{ width: "100%" }}
+          >
+            <h6>{item.newComment.email}</h6>
+            <Tooltip title={moment().format("YYYY-MM-DD HH:mm:ss")}>
+              <span style={{ color: "grey", fontSize: "18px" }}>
+                {timeSince(item.newComment.createdAtMs)} назад{" "}
+              </span>
+            </Tooltip>
+          </div>
+        </div>
+        <div className="d-flex justify-content-between align-items-center" >
+          <h5 style={{ color: "black" }}>{item.newComment.word}</h5>
+          {email === item.newComment.email ? (
+            <button
+              style={{
+                height: "40px",
+                width: "5%",
+                border: "none",
+                backgroundColor: "red",
+                color: "white",
+                fontSize: "18px",
+                borderRadius: "5px",
+              }}
+              onClick={() => deleteComment(item.id, id)}
+            >
+              delete
+            </button>
+          ) : null}
+        </div>
         <div>
           <Tooltip key="comment-basic-like" title="Like">
             <span onClick={like}>
@@ -74,20 +110,6 @@ const Comments = ({ item, id }) => {
           </Tooltip>
         </div>
       </div>
-      <button
-        style={{
-          height: "30%",
-          width: "5%",
-          border: "none",
-          backgroundColor: "orange",
-          color: "white",
-          fontSize: "18px",
-          borderRadius: "5px",
-        }}
-        onClick={() => deleteComment(item.id, id)}
-      >
-        delete
-      </button>
     </div>
   );
 };

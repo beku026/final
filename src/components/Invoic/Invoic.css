@@ -1,0 +1,58 @@
+.check{
+    width: 80%;
+    height: 900px;
+    background-color: rgb(250, 250, 173);
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+.check_inner{
+    width: 90%;
+    height: 90%
+}
+
+.ch{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.check-words{
+    color: red;
+    font-size: 20px;
+    font-weight: 600;
+}
+.thanks{
+    color: "red";
+}
+@media all and (max-width: 520px){
+    .check-words{
+        font-size: 15px;
+    }
+}
+@media all and (max-width: 415px){
+    .total{
+        position: absolute;
+        right: 60px;
+        bottom: -10px;
+    }
+}
+@media all and (max-width: 370px){
+    .thanks{
+        display: none;
+    }
+    .total{
+        bottom: -20px;
+    }
+}
+@media all and (max-width: 328px){
+    .total{
+        bottom: -30px;
+        right: 130px;
+    }
+}
+

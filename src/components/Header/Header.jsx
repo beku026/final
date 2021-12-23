@@ -3,7 +3,7 @@ import { Container, Navbar } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
 import "./Header.css";
 import Logo from "../image/logo-3.png";
-import { useAuth } from "../../context/AuthContext";
+import { useAuth } from "../../context/authContext";
 import {
   HeartOutlined,
   ShoppingCartOutlined,
