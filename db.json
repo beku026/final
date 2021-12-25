@@ -1,5 +1,5 @@
 {
-  "tanks": [
+  "apitanks": [
     {
       "name": "Т-100 ЛТ",
       "type": "Легкий танк",
@@ -253,7 +253,7 @@
       "id": 33
     }
   ],
-  "comments": [
+  "apicomments": [
     {
       "newComment": {
         "word": "это объект 268",
@@ -425,7 +425,7 @@
       "id": 19
     }
   ],
-  "likes": [
+  "apilikes": [
     {
       "owner": "akybek01@gmail.com",
       "productId": "16",

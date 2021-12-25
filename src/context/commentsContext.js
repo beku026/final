@@ -2,7 +2,7 @@ import React, { useReducer } from "react";
 import axios from "axios";
 
 export const commentContext = React.createContext();
-const COMMENTS_API = "http://localhost:8000/comments"
+const COMMENTS_API = "https://project-wot.herokuapp.com/apicomments"
 const INIT_STATE = {
   comments: [],
 };

@@ -15,10 +15,6 @@ const CommentList = ({ id }) => {
     getComments(id);
   }, [id]);
 
-  useEffect(() => {
-    if (comments) console.log(comments.sort((a, b) => b.createdAtMs - a.createdAtMs))
-  }, [comments])
-
   const [newComment, setNewComment] = useState({
     word: "",
   });

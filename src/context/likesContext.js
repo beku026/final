@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useReducer } from "react";
-const APIlikes = "http://localhost:8000/likes"
+const APIlikes = "https://project-wot.herokuapp.com/apilikes"
 export const likesContext = React.createContext();
 
 const INIT_STATE = {
