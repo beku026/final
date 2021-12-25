@@ -4,26 +4,33 @@ import { commentContext } from "../../context/commentsContext";
 import Comments from "../Commentarii/Comments";
 import "./Comments.css";
 import { useAuth } from "../../context/authContext";
-
+import Likes from "../Likes/Likes";
 
 const CommentList = ({ id }) => {
-  const { user: { email } } = useAuth()
+  const {
+    user: { email },
+  } = useAuth();
   const { getComments, comments, createComment } = useContext(commentContext);
   useEffect(() => {
     getComments(id);
   }, [id]);
+
+  useEffect(() => {
+    if (comments) console.log(comments.sort((a, b) => b.createdAtMs - a.createdAtMs))
+  }, [comments])
+
   const [newComment, setNewComment] = useState({
     word: "",
-  }); 
+  });
 
   function handleValues(e) {
-    const createdAtMs = Date.now()
+    const createdAtMs = Date.now();
     let values = {
       ...newComment,
       [e.target.name]: e.target.value,
       createdAtMs,
       tanksId: id,
-      email
+      email,
     };
     setNewComment(values);
   }
@@ -33,8 +40,7 @@ const CommentList = ({ id }) => {
       alert("Вы еще ничего не написали!");
       return;
     } else {
-      
-      createComment(newComment, id );
+      createComment(newComment, id);
     }
   }
   return (
@@ -49,32 +55,38 @@ const CommentList = ({ id }) => {
         border: "solid black 2px",
       }}
     >
-      <h3 style={{ textAlign: "center" }}>Оставьте отзыв/комментарий</h3>
+      <div className="d-flex justify-content-between">
+        <h3 style={{ textAlign: "center" }}>Оставьте отзыв/комментарий</h3>
+        {email ? <Likes /> : null}
+      </div>
       <div className="items-list">
-        {comments.map((item) => (
-          <Comments id={id} key={item.id} item={item} />
-        ))}
+        {comments
+          ? comments
+              .sort((a, b) => b.newComment.createdAtMs - a.newComment.createdAtMs)
+              .map((item) => <Comments id={id} key={item.id} item={item} />)
+          : null}
       </div>
-
-      <div style={{ display: "flex", height: "60px" }}>
-        <Input
-          id="comment"
-          onChange={handleValues}
-          name="word"
-          placeholder="Enter text..."
-        />
-        <button
-          onClick={() => checkValues()}
-          style={{
-            background: "#3399ff",
-            borderRadius: "5px",
-            border: "none",
-            color: "white",
-          }}
-        >
-          Add comment
-        </button>
-      </div>
+      {email ? (
+        <div style={{ display: "flex", height: "60px" }}>
+          <Input
+            id="comment"
+            onChange={handleValues}
+            name="word"
+            placeholder="Enter text..."
+          />
+          <button
+            onClick={() => checkValues()}
+            style={{
+              background: "#3399ff",
+              borderRadius: "5px",
+              border: "none",
+              color: "white",
+            }}
+          >
+            Add comment
+          </button>
+        </div>
+      ) : null}
     </div>
   );
 };

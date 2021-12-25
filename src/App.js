@@ -11,6 +11,7 @@ import Routing from "./Routing";
 import CommentContextProvider from "./context/commentsContext";
 import CartContextProvider from "./context/cartContext";
 import FavouriteContextProvider from "./context/favouritesContext";
+import LikesContextProvider from "./context/likesContext";
 const App = () => {
   return (
     <div>
@@ -19,11 +20,13 @@ const App = () => {
           <CommentContextProvider>
             <CartContextProvider>
               <FavouriteContextProvider>
+              <LikesContextProvider>
                 <BrowserRouter>
                   <Header />
                   <Routing />
                   <Footer />
                 </BrowserRouter>
+              </LikesContextProvider>
               </FavouriteContextProvider>
             </CartContextProvider>
           </CommentContextProvider>

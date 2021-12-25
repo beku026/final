@@ -1,10 +1,11 @@
 import { createContext, useState, useContext, useEffect, useReducer } from "react";
 import fire from "../fire"
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { GoogleAuthProvider, signInWithPopup, sendPasswordResetEmail } from "firebase/auth";
 import { auth } from "../fire" 
 
-export const authContext = createContext();
-
+export const authContext = createContext({
+  forgotPassword: () => Promise,
+});
 export const useAuth = () => {
   return useContext(authContext);
 };
@@ -39,6 +40,7 @@ const AuthContextProvider = ({ children }) => {
   };
 
   const googleProvider = new GoogleAuthProvider();
+
   const authWithGoogle = async () => {
     try {
       await signInWithPopup(auth, googleProvider);
@@ -46,6 +48,13 @@ const AuthContextProvider = ({ children }) => {
       console.log(e);
     }
   };
+
+
+  function forgotPassword(email) {
+    return sendPasswordResetEmail(auth, email)
+  }
+
+
   const handleSignUp = () => {
     clearErrors();
     fire
@@ -116,7 +125,8 @@ const AuthContextProvider = ({ children }) => {
     emailError,
     passwordError,
     googleUser: state.googleUser,
-    authWithGoogle
+    authWithGoogle,
+    forgotPassword
   };
 
   return <authContext.Provider value={values}>{children}</authContext.Provider>;

@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
 
 const Cart = () => {
+
   const [newUser, setNewUser] = useState({
     username: "",
     provinсe: "",
@@ -65,11 +66,7 @@ const Cart = () => {
     <div
       style={{
         paddingTop: "100px",
-        paddingBottom: "50px",
-        // backgroundImage:
-        //   "url(https://media-wbp.wgcdn.co/media/filer_public_thumbnails/filer_public/images/AMX-M4-54-1920-1080.jpg__1048x590_q95_crop_subsampling-2.jpg)",
-        //   backgroundSize: 'cover',
-        //   backgroundAttachment: 'fixed'
+        paddingBottom: "50px"
       }}
     >
       <List

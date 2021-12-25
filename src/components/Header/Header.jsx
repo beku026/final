@@ -5,7 +5,7 @@ import "./Header.css";
 import Logo from "../image/logo-3.png";
 import { useAuth } from "../../context/authContext";
 import {
-  HeartOutlined,
+  StarOutlined,
   ShoppingCartOutlined,
 } from "@ant-design/icons/lib/icons";
 import { Badge } from "antd";
@@ -34,7 +34,7 @@ const Header = () => {
       variant="light"
       className="d-flex justify-content-between"
       style={{
-        height: "80px",
+        height: "70px",
         width: "100%",
         background: "rgba(0,0,0,0.4)",
         position: "fixed",
@@ -43,7 +43,7 @@ const Header = () => {
     >
       <Container>
         <Link to="/">
-          <img className="logo" width="80px" src={Logo} alt="" />
+          <img className="logo" width="65px" src={Logo} alt="" />
         </Link>
         <>
           {email === "tarieltairov1@gmail.com" ? (
@@ -86,7 +86,7 @@ const Header = () => {
 
           <Link to="/favourites">
             <Badge count={+favouriteLength}>
-              <HeartOutlined className="shop-icon" style={{ color: "white" }} />
+              <StarOutlined className="shop-icon" style={{ color: "white" }} />
             </Badge>
           </Link>
 

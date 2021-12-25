@@ -60,7 +60,6 @@ const CartContextProvider = ({ children }) => {
         totalPrice: 0,
       };
     }
-    console.log(cart);
     cart.totalPrice = calcTotalPrice(cart.products);
     dispatch({
       type: "GET_CART",

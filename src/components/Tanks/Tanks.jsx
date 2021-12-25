@@ -1,7 +1,7 @@
 import {
   DeleteOutlined,
   EditOutlined,
-  HeartOutlined,
+  StarOutlined,
   MoreOutlined,
   ShoppingCartOutlined,
 } from "@ant-design/icons/lib/icons";
@@ -66,6 +66,9 @@ const Tanks = ({ item }) => {
               </span>
               <span style={{ color: "black" }}> токенов</span>
             </div>
+            <Link to={`/details/${item.id}`}>
+              <MoreOutlined />
+            </Link>
             {email === "tarieltairov1@gmail.com" ? (
               <DeleteOutlined
                 style={{ color: "orangered" }}
@@ -78,9 +81,7 @@ const Tanks = ({ item }) => {
                 <EditOutlined style={{ color: "orangered" }} className="m-3" />
               </Link>
             ) : null}
-            <Link to={`/details/${item.id}`}>
-              <MoreOutlined />
-            </Link>
+             
 
             {email ? (
               <ShoppingCartOutlined
@@ -95,7 +96,7 @@ const Tanks = ({ item }) => {
               />
             ) : null}
 
-            {email ? (<HeartOutlined
+            {email ? (<StarOutlined
               style={{
                 color: checkInFavourite ? "red" : "black",
                 fontSize: "25px",
@@ -106,7 +107,7 @@ const Tanks = ({ item }) => {
               }}
               />):null}
 
-            <Rate />
+            {/* <Rate /> */}
           </Card.Body>
         </Card>
       </div>

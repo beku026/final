@@ -11,6 +11,7 @@ import TanksList from './components/TanksList/TanksList';
 import { useAuth } from './context/authContext';
 import Pay from "./components/Pay/Pay";
 import Invoic from './components/Invoic/Invoic';
+import Forgot from './components/Auth/Forgot';
 
 const Routing = () => {
     const {user} = useAuth()
@@ -60,6 +61,11 @@ const Routing = () => {
           element: <Invoic />,
           id: 9,
         },
+        {
+          link: "/forgot",
+          element: <Forgot />,
+          id: 9
+        }
       ]
     
       let admin = [

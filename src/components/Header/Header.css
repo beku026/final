@@ -15,8 +15,11 @@
     color: white ;
 }
 
-.logo:hover{
+.logo{
     filter: brightness(200%)
+}
+.logo:hover{
+    filter: brightness(500%)
 }
 
 .navbar__item{

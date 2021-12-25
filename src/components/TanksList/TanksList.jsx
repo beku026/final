@@ -21,19 +21,20 @@ const TanksList = () => {
   const [limit, setLimit] = useState(
     searchParams.get("_limit") ? searchParams.get("_limit") : 9
   );
+  
   useEffect(() => {
-    getTanks();
-  }, [searchParams]);
+      setSearchParams({
+          q: search,
+          _limit: limit,
+          _page: page,
+          type: type
+        });
+      }, []);
 
-  useEffect(() => {
-    setSearchParams({
-      q: search,
-      _limit: limit,
-      _page: page,
-      type: type
-    });
-  }, []);
-
+      useEffect(() => {
+        getTanks();
+      }, [searchParams]);
+      
   useEffect(() => {
     setSearchParams({
       q: search,

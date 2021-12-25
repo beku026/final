@@ -265,15 +265,9 @@
   "comments": [
     {
       "newComment": {
-        "word": "т110лт",
-        "tanksId": 11
-      },
-      "tankId": 11,
-      "id": 1
-    },
-    {
-      "newComment": {
         "word": "это объект 268",
+        "createdAtMs": 1640254052087,
+        "email": "mairash@gmail.com",
         "tanksId": 16
       },
       "tankId": 16,
@@ -282,6 +276,8 @@
     {
       "newComment": {
         "word": "csgjhakl;'",
+        "createdAtMs": 1640254052087,
+        "email": "mairash@gmail.com",
         "tanksId": 16
       },
       "tankId": 16,
@@ -290,7 +286,8 @@
     {
       "newComment": {
         "word": "sdfdsf",
-        "createdAtMs": 1640253270085,
+        "createdAtMs": 1640254052087,
+        "email": "mairash@gmail.com",
         "tanksId": 16
       },
       "tankId": 16,
@@ -299,7 +296,8 @@
     {
       "newComment": {
         "word": "asdsd",
-        "createdAtMs": 1640253368208,
+        "createdAtMs": 1640254052087,
+        "email": "mairash@gmail.com",
         "tanksId": 16
       },
       "tankId": 16,
@@ -308,7 +306,8 @@
     {
       "newComment": {
         "word": "asdsdasd",
-        "createdAtMs": 1640253449640,
+        "createdAtMs": 1640254052087,
+        "email": "mairash@gmail.com",
         "tanksId": 16
       },
       "tankId": 16,
@@ -328,11 +327,79 @@
       "newComment": {
         "word": "фнысдротлфдлсд",
         "createdAtMs": 1640254052087,
-        "tanksId": 16,
-        "email": "mairash@gmail.com"
+        "email": "mairash@gmail.com",
+        "tanksId": 16
       },
       "tankId": 16,
       "id": 8
+    },
+    {
+      "newComment": {
+        "word": "Тариэль красава",
+        "createdAtMs": 1640268833282,
+        "tanksId": 6,
+        "email": "mairash@gmail.com"
+      },
+      "tankId": 6,
+      "id": 10
+    },
+    {
+      "newComment": {
+        "word": "hgjhghjg",
+        "createdAtMs": 1640325444870,
+        "tanksId": 4,
+        "email": "mairash@gmail.com"
+      },
+      "tankId": 4,
+      "id": 11
+    },
+    {
+      "newComment": {
+        "word": "webiuhnli",
+        "createdAtMs": 1640334402225,
+        "tanksId": 16,
+        "email": "tfasgaj@mail.ru"
+      },
+      "tankId": 16,
+      "id": 12
+    },
+    {
+      "newComment": {
+        "word": "com 1",
+        "createdAtMs": 1640334445101,
+        "tanksId": 16,
+        "email": "tfasgaj@mail.ru"
+      },
+      "tankId": 16,
+      "id": 13
+    },
+    {
+      "newComment": {
+        "word": "new",
+        "createdAtMs": 1640338866246,
+        "tanksId": 16,
+        "email": "akybek01@gmail.com"
+      },
+      "tankId": 16,
+      "id": 14
+    },
+    {
+      "newComment": {
+        "word": "gjh",
+        "createdAtMs": 1640346532178,
+        "tanksId": 16,
+        "email": "akybek01@gmail.com"
+      },
+      "tankId": 16,
+      "id": 15
+    }
+  ],
+  "likes": [
+    {
+      "owner": "akybek01@gmail.com",
+      "productId": "16",
+      "rate": 1,
+      "id": 6
     }
   ]
 }

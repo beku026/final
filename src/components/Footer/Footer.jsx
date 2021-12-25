@@ -1,8 +1,9 @@
 import React from "react";
 import "./Footer.css";
+import tg from '../image/tg.png'
 const Footer = () => {
   return (
-    <div style={{width: '100%'}}>
+    <div style={{ width: "100%" }}>
       <div
         style={{
           width: "100%",
@@ -62,15 +63,15 @@ const Footer = () => {
               <h6 className="footer_text">БОЛЕЕ 160 000 000 ИГРОКОВ</h6>
             </div>
           </a>
-          <a href="https://www.facebook.com/WorldOfTanks" target="_blank">
+          <a href="http://t.me/project_wot_bot" target="_blank">
             <div>
               <img
-                width="45px"
-                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgdmlld0JveD0iMCAwIDMwIDMwIj48ZyBmaWxsPSJub25lIj48cGF0aCBmaWxsPSIjRkZGIiBkPSJNMTEgM2gxNXYyN0gxMXoiLz48cGF0aCBmaWxsPSIjNDE1RDlDIiBkPSJNMjYgMEg0QzEuNiAwIDAgMS42IDAgNHYyMmMwIDIuNDAyIDEuNiA0IDQgNGgxMVYxOGgtNHYtNGg0di0zYzAtNC4zMzYgMi4xNTUtNy4wMzggNy03aDJ2NGgtMmMtMi40NjQgMC0yLjgyNCAxLjc1OC0zIDN2M2g1bC0xIDRoLTR2MTJoN2MyLjQgMCA0LTEuNTk4IDQtNFY0YzAtMi40LTEuNi00LTQtNHoiLz48L2c+PC9zdmc+"
+                width="80px"
+                src={tg}
                 alt=""
               />
-              <h5 className="footer_text">ПРИСОЕДИНЯЙТЕСЬ К НАМ НА</h5>
-              <h5 className="footer_text">FACEBOOK</h5>
+              <h5 className="footer_text">ЗАДАЙТЕ ВОПРОС БОТУ </h5>
+              <h5 className="footer_text">В ТЕЛЕГГРАММ</h5>
             </div>
           </a>
           <a href="https://vk.com/worldoftanks" target="_blank">
@@ -95,10 +96,23 @@ const Footer = () => {
             </div>
           </a>
         </div>
-        <div styele={{marginTop: '150px'}}>
-            <h3 className="footer_text">How to contact us?</h3>
-            <h5 className="footer_text">Email:  <span style={{color: "#3399ff", fontSize: '22px'}}>tarieltairov1@gmail.com</span>  </h5>
-            <h5 className="footer_text">Phone number:  <a href="tel:+996704135830" style={{textDecoration: 'none', color: "#3399ff"}}>+996704135830</a></h5>
+        <div styele={{ marginTop: "150px" }}>
+          <h3 className="footer_text">How to contact us?</h3>
+          <h5 className="footer_text">
+            Email:{" "}
+            <span style={{ color: "#3399ff", fontSize: "22px" }}>
+              tarieltairov1@gmail.com
+            </span>{" "}
+          </h5>
+          <h5 className="footer_text">
+            Phone number:{" "}
+            <a
+              href="tel:+996704135830"
+              style={{ textDecoration: "none", color: "#3399ff" }}
+            >
+              +996704135830
+            </a>
+          </h5>
         </div>
       </div>
     </div>
