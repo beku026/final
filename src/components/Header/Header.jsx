@@ -45,7 +45,7 @@ const Header = () => {
         <Link to="/">
           <img className="logo" width="65px" src={Logo} alt="" />
         </Link>
-        <>
+        <div className="route">
           {email === "tarieltairov1@gmail.com" ? (
             <Link
               className={
@@ -55,7 +55,7 @@ const Header = () => {
               }
               to="/add"
             >
-              ДОБАВИТЬ ТАНК
+              ADD
             </Link>
           ) : null}
 
@@ -67,16 +67,16 @@ const Header = () => {
             }
             to="/tanks"
           >
-            ТАНКИ
+            <TANKS></TANKS>
           </Link>
-        </>
+        </div>
 
         <div
           style={{ width: "250px" }}
-          className=" d-flex justify-content-between align-items-center"
+          className="icons"
         >
           <Link to="/cart">
-            <Badge count={+cartLength}>
+            <Badge className="shop-icon" count={+cartLength}>
               <ShoppingCartOutlined
                 className="shop-icon"
                 style={{ color: "white" }}
@@ -85,7 +85,7 @@ const Header = () => {
           </Link>
 
           <Link to="/favourites">
-            <Badge count={+favouriteLength}>
+            <Badge className="shop-icon" count={+favouriteLength}>
               <StarOutlined className="shop-icon" style={{ color: "white" }} />
             </Badge>
           </Link>

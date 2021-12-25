@@ -21,18 +21,18 @@ const Home = () => {
 
   return (
     <>
-      <section style={{ position: "absolute", zIndex: "-1", width: "100%" }}>
+    <div>
+      <section style={{ width: "100%" }} className="beginer">
         <video
+        style={{position: "absolute",zIndex: '-1'}}
           width="100%"
           autoPlay
           loop
           muted
           src="https://ru-wotp.wgcdn.co/static/5.96.0_9090e7/wotp_static/img/core/frontend/scss/common/blocks/video-bg/img/video-bg.mp4"
         ></video>
-      </section>
-      <div className="beginer container">
         <img
-          width="500px"
+          width="50%"
           src={Photo}
           alt=""
           style={{ marginBottom: "100px" }}
@@ -43,32 +43,33 @@ const Home = () => {
           достоверные машины, реалистичный геймплей — присоединяйтесь к армии
           танкистов и окунитесь в атмосферу легендарных сражений.
         </p>
+      </section>
       </div>
       <section className="word">
         <h2>ИГРА С ИСТОРИЕЙ</h2>
         <div className="sec">
           <Carousel controls={false} indicators={false}>
             <Carousel.Item>
-              <p>ЧЕТЫРЕ НАГРАДЫ GOLDEN JOYSTICK</p>
-              <h3>
+              <p className="kri">ЧЕТЫРЕ НАГРАДЫ GOLDEN JOYSTICK</p>
+              <h3 className="kri-bottom">
                 «Лучшая MMO» (2012), «Лучшая онлайн-игра» (2013), <br />
                 «По-прежнему в тренде» (2017, 2018)
               </h3>
             </Carousel.Item>
             <Carousel.Item>
-              <p>ДВА МИРОВЫХ РЕКОРДА ГИННЕССА</p>
-              <h3>
+              <p className="kri">ДВА МИРОВЫХ РЕКОРДА ГИННЕССА</p>
+              <h3 className="kri-bottom">
                 За наибольшее количество игроков, <br />
                 одновременно пребывающих на игровом сервере
               </h3>
             </Carousel.Item>
             <Carousel.Item>
-              <p>КРИ 2011</p>
-              <h3>Звание лучшей игры года и приз зрительских симпатий</h3>
+              <p className="kri">КРИ 2011</p>
+              <h3 className="kri-bottom">Звание лучшей игры года и приз зрительских симпатий</h3>
             </Carousel.Item>
           </Carousel>
         </div>
-        <p style={{ textAlign: "center", maxWidth: "70%" }}>
+        <p className="desc" style={{ textAlign: "center", maxWidth: "70%" }}>
           World of Tanks — это более 600 бронированных машин середины ХХ века. В
           ваших руках окажутся лучшие танки эпохи - от легендарных Т-34 и ИС,
           ковавших победу Красной армии, до безумных идей гениев инженерной
@@ -89,54 +90,63 @@ const Home = () => {
         <Carousel>
           <Carousel.Item>
             <img
+              width="100%"
               src="https://ru-wotp.wgcdn.co/dcont/fb/image/tmb/1_a66_m103_redshir_1024x.jpg"
               alt="Second slide"
             />
           </Carousel.Item>
           <Carousel.Item>
             <img
+            width="100%"
               src="https://ru-wotp.wgcdn.co/dcont/fb/image/tmb/3_f18_bat_chatillon25t_pereval_1024x.jpg"
               alt="Third slide"
             />
           </Carousel.Item>
           <Carousel.Item>
             <img
+            width="100%"
               src="https://ru-wotp.wgcdn.co/dcont/fb/image/tmb/4_r45_is_7_mannerheim_line_1024x.jpg"
               alt="Third slide"
             />
           </Carousel.Item>
           <Carousel.Item>
             <img
+            width="100%"
               src="https://ru-wotp.wgcdn.co/dcont/fb/image/tmb/5_a116_xm551_prohorovka_1024x.jpg"
               alt="Third slide"
             />
           </Carousel.Item>
           <Carousel.Item>
             <img
+            width="100%"
               src="https://ru-wotp.wgcdn.co/dcont/fb/image/tmb/6_a120_m48a5_patton_aerodrom_1024x.jpg"
               alt="Third slide"
             />
           </Carousel.Item>
           <Carousel.Item>
             <img
+            width="100%"
               src="https://ru-wotp.wgcdn.co/dcont/fb/image/tmb/7_a116_xm551_mannerheim_line_1024x.jpg"
               alt="Third slide"
             />
           </Carousel.Item>
           <Carousel.Item>
             <img
+            width="100%"
               src="https://ru-wotp.wgcdn.co/dcont/fb/image/tmb/8_lt08_progetto_m40_mod_65_el-halluf_1024x.jpg"
               alt="Third slide"
             />
           </Carousel.Item>
           <Carousel.Item>
             <img
+            width="100%"
               src="https://ru-wotp.wgcdn.co/dcont/fb/image/tmb/9_r133_kv_122_02_murovanka_1024x.jpg"
               alt="Third slide"
             />
           </Carousel.Item>
           <Carousel.Item>
             <img
+            width="100%"
               src="https://ru-wotp.wgcdn.co/dcont/fb/image/tmb/10_gb31_conqueror_gc_rudniki_1024x.jpg"
               alt="Third slide"
             />
@@ -153,32 +163,36 @@ const Home = () => {
           style={{ top: "100px" }}
         >
           <Carousel.Item className="item1">
-            <h1 style={{ color: "white", fontSize: "80px" }}>СССР</h1>
+            <h1 style={{ color: "white", fontSize: "80px" }} className="nat">СССР</h1>
             <img
+              width="100%"
               src="https://ru-wotp.wgcdn.co/static/5.96.0_9090e7/wotp_static/img/core/frontend/scss/common/blocks/about-technic/img/overlap/ussr.webp"
               alt=""
             />
             <p>Т-34, ИС, ИС-7, КВ-1, ИСУ-152</p>
           </Carousel.Item>
           <Carousel.Item className="item2">
-            <h1 style={{ color: "white", fontSize: "80px" }}>ГЕРМАНИЯ</h1>
+            <h1 style={{ color: "white", fontSize: "80px" }} className="nat" >ГЕРМАНИЯ</h1>
             <img
+            width="100%"
               src="https://ru-wotp.wgcdn.co/static/5.96.0_9090e7/wotp_static/img/core/frontend/scss/common/blocks/about-technic/img/overlap/germany.webp"
               alt=""
             />
             <p>StuG III, Panther, Maus, Tiger, Pz. III</p>
           </Carousel.Item>
           <Carousel.Item className="item3">
-            <h1 style={{ color: "white", fontSize: "80px" }}>США</h1>
+            <h1 style={{ color: "white", fontSize: "80px" }} className="nat">США</h1>
             <img
+            width="100%"
               src="https://ru-wotp.wgcdn.co/static/5.96.0_9090e7/wotp_static/img/core/frontend/scss/common/blocks/about-technic/img/overlap/usa.webp"
               alt=""
             />
             <p>Sherman, Pershing, Patton, T32, Hellcat</p>
           </Carousel.Item>
           <Carousel.Item className="item4">
-            <h1 style={{ color: "white", fontSize: "80px" }}>ФРАНЦИЯ</h1>
+            <h1 style={{ color: "white", fontSize: "80px" }} className="nat">ФРАНЦИЯ</h1>
             <img
+            width="100%"
               src="https://ru-wotp.wgcdn.co/static/5.96.0_9090e7/wotp_static/img/core/frontend/scss/common/blocks/about-technic/img/overlap/france.webp"
               alt=""
             />
@@ -187,8 +201,9 @@ const Home = () => {
             </p>
           </Carousel.Item>
           <Carousel.Item className="item5">
-            <h1 style={{ color: "white", fontSize: "80px" }}>ВЕЛИКОБРИТАНИЯ</h1>
+            <h1 style={{ color: "white", fontSize: "80px" }} className="nat">ВЕЛИКОБРИТАНИЯ</h1>
             <img
+            width="100%"
               src="https://ru-wotp.wgcdn.co/static/5.96.0_9090e7/wotp_static/img/core/frontend/scss/common/blocks/about-technic/img/overlap/uk.webp"
               alt=""
             />
@@ -197,8 +212,9 @@ const Home = () => {
             </p>
           </Carousel.Item>
           <Carousel.Item className="item6">
-            <h1 style={{ color: "white", fontSize: "80px" }}>ЧЕХОСЛОВАКИЯ</h1>
+            <h1 style={{ color: "white", fontSize: "80px" }} className="nat">ЧЕХОСЛОВАКИЯ</h1>
             <img
+            width="100%"
               src="https://ru-wotp.wgcdn.co/static/5.96.0_9090e7/wotp_static/img/core/frontend/scss/common/blocks/about-technic/img/overlap/czech.webp"
               alt=""
             />
@@ -208,32 +224,36 @@ const Home = () => {
             </p>
           </Carousel.Item>
           <Carousel.Item className="item7">
-            <h1 style={{ color: "white", fontSize: "80px" }}>КИТАЙ</h1>
+            <h1 style={{ color: "white", fontSize: "80px" }} className="nat">КИТАЙ</h1>
             <img
+            width="100%"
               src="https://ru-wotp.wgcdn.co/static/5.96.0_9090e7/wotp_static/img/core/frontend/scss/common/blocks/about-technic/img/overlap/china.webp"
               alt=""
             />
             <p>WZ-132, WZ-111, WZ-111 model 5A, T-34-1, WZ-111-1G FT</p>
           </Carousel.Item>
           <Carousel.Item className="item8">
-            <h1 style={{ color: "white", fontSize: "80px" }}>ЯПОНИЯ</h1>
+            <h1 style={{ color: "white", fontSize: "80px" }} className="nat">ЯПОНИЯ</h1>
             <img
+            width="100%"
               src="https://ru-wotp.wgcdn.co/static/5.96.0_9090e7/wotp_static/img/core/frontend/scss/common/blocks/about-technic/img/overlap/japan.webp"
               alt=""
             />
             <p>Type 61, O-I, Type 5 Heavy, Type 5 Chi-Ri, STB-1</p>
           </Carousel.Item>
           <Carousel.Item className="item9">
-            <h1 style={{ color: "white", fontSize: "80px" }}>ШВЕЦИЯ </h1>
+            <h1 style={{ color: "white", fontSize: "80px" }} className="nat">ШВЕЦИЯ </h1>
             <img
+            width="100%"
               src="https://ru-wotp.wgcdn.co/static/5.96.0_9090e7/wotp_static/img/core/frontend/scss/common/blocks/about-technic/img/overlap/sweden.webp"
               alt=""
             />
             <p>Emil II, UDES 03, Kranvagn, Strv 103B, Strv 74</p>
           </Carousel.Item>
           <Carousel.Item className="item10">
-            <h1 style={{ color: "white", fontSize: "80px" }}>ПОЛЬША</h1>
+            <h1 style={{ color: "white", fontSize: "80px" }} className="nat">ПОЛЬША</h1>
             <img
+            width="100%"
               src="https://ru-wotp.wgcdn.co/static/5.96.0_9090e7/wotp_static/img/core/frontend/scss/common/blocks/about-technic/img/overlap/poland.webp"
               alt=""
             />
@@ -243,8 +263,9 @@ const Home = () => {
             </p>
           </Carousel.Item>
           <Carousel.Item className="item11">
-            <h1 style={{ color: "white", fontSize: "80px" }}>ИТАЛИЯ</h1>
+            <h1 style={{ color: "white", fontSize: "80px" }} className="nat">ИТАЛИЯ</h1>
             <img
+            width="100%"
               src="https://ru-wotp.wgcdn.co/static/5.96.0_9090e7/wotp_static/img/core/frontend/scss/common/blocks/about-technic/img/overlap/italy.webp"
               alt=""
             />
@@ -255,7 +276,8 @@ const Home = () => {
           </Carousel.Item>
         </Carousel>
       </section>
-      <section className="types">
+
+      {/* <section className="types">
         <div
           style={{
             position: "absolute",
@@ -270,9 +292,9 @@ const Home = () => {
             Огромное разнообразие боевой техники позволит найти машины, наиболее
             подходящие вашему стилю игры
           </p>
-        </div>
+        </div> */}
 
-        <Carousel>
+        {/* <Carousel>
           <Carousel.Item className="medium d-flex flex-column justify-content-between">
             <div
               className="d-flex justify-content-center align-items-center"
@@ -585,7 +607,7 @@ const Home = () => {
             </div>
           </Carousel.Item>
         </Carousel>
-      </section>
+      </section> */}
     </>
   );
 };

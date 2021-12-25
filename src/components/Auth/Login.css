@@ -75,3 +75,8 @@
     font-size: 20px;
   }
   
+  @media all and (max-width: 370px){
+    .login-container{
+      min-width: 320px;
+    }
+  }

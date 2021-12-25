@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { List} from "antd";
+import { List } from "antd";
 import { cartContext } from "../../context/cartContext";
 import { Button } from "react-bootstrap";
 
@@ -36,13 +36,15 @@ const CartItem = ({ item }) => {
               style={{
                 display: "flex",
                 justifyContent: "space-between",
-                width: "40%",
+                width: "100%",
                 marginTop: "20px",
+                // flexW
               }}
             >
               <div>
                 <h4>Количество</h4>
                 <Button
+                  className="m-1"
                   variant="outline-primary"
                   onClick={() =>
                     changeProductCount(item.count - 1, item.item.id)
@@ -51,7 +53,7 @@ const CartItem = ({ item }) => {
                   -
                 </Button>
                 <input
-                  style={{ width: "40px", height: '35px' }}
+                  style={{ width: "40px", height: "35px" }}
                   value={item.count}
                   disabled
                 />
@@ -69,7 +71,10 @@ const CartItem = ({ item }) => {
                 <h3>{item.subPrice + " $"}</h3>
               </div>
             </div>
-            <Button variant="danger" onClick={() => deleteFromCart(item.item.id)}>
+            <Button
+              variant="danger"
+              onClick={() => deleteFromCart(item.item.id)}
+            >
               Удалить с корзины
             </Button>
           </>

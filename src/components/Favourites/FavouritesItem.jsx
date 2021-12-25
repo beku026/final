@@ -3,7 +3,7 @@ import { List } from "antd";
 import { favouriteContext } from "../../context/favouritesContext";
 import { Button } from "react-bootstrap";
 import { cartContext } from "../../context/cartContext";
-
+import "./Fav.css"
 const FavouritesItem = ({ item }) => {
   const { addProductToCart, checkItemInCart } = useContext(cartContext);
   const [checkInCart, setCheckInCart] = useState(checkItemInCart(item.id));
@@ -38,9 +38,18 @@ const FavouritesItem = ({ item }) => {
           }
           description={
             <>
-              <div>{item.item.description}</div>
-              <div className="d-flex justify-content-between" style={{width: '40%', marginTop: '40px'}}>
+              <div className="desk">{item.item.description}</div>
+              <div
+                className="d-flex justify-content-between"
+                style={{
+                  width: "40%",
+                  marginTop: "40px",
+                  display: "flex",
+                  flexWrap: "wrap",
+                }}
+              >
                 <Button
+                  className="m-1"
                   variant="danger"
                   onClick={() => deleteFromFavourite(item.item.id)}
                 >
@@ -48,13 +57,14 @@ const FavouritesItem = ({ item }) => {
                 </Button>
 
                 <Button
+                  className="m-1"
                   variant={checkInCart ? "outline-warning" : "outline-danger"}
                   onClick={() => {
                     addProductToCart(item.item);
                     setCheckInCart(checkItemInCart(item.item.id));
                   }}
                 >
-                  {checkInCart ? `Удалить с корзины` : `Добавить в корзину` }
+                  {checkInCart ? `Удалить с корзины` : `Добавить в корзину`}
                 </Button>
               </div>
             </>

@@ -9,13 +9,14 @@ const Filter = ({ type, setType }) => {
   }, []);
   return (
     <Select
+      className="m-1"
       value={type}
       onChange={(e) => setType(e)}
-      style={{ width: "200px", fontSize: '20px' }}
+      style={{ width: "200px", fontSize: "20px" }}
       mode="multiple"
-      placeholder="По типу"
+      placeholder="Фильтр"
     >
-      {tanks.map((item) =>(
+      {tanks.map((item) => (
         <Option value={item.type} key={item.id}>
           {item.type}
         </Option>
@@ -25,4 +26,3 @@ const Filter = ({ type, setType }) => {
 };
 
 export default Filter;
-

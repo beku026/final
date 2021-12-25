@@ -1,13 +1,34 @@
 
 .footer{
     width: 100%;
-    height: 400px;
+    height: 50%;
     background-color: black;
     text-align: center;
 }
 .footer_text{
     color: white;
 }
+.foot-h1{
+    color: white;
+    font-size: 60px; 
+    margin-bottom: 20px;
+}
 a{
     text-decoration: none !important;
+}
+
+@media all and (max-width: 1013px){
+    .foot-h1{
+        font-size: 40px;
+    }
+}
+@media all and (max-width: 715px){
+    .foot-h1{
+        font-size: 30px;
+    }
+}
+@media all and (max-width: 531px){
+    .foot-h1{
+        font-size: 20px;
+    }
 }

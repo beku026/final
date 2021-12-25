@@ -1,4 +1,4 @@
-import { Empty, Input } from "antd";
+import { Input } from "antd";
 import React, { useContext, useEffect, useState } from "react";
 import { TanksContext } from "../../context/TanksContext";
 import Tanks from "../Tanks/Tanks";
@@ -7,10 +7,9 @@ import { Pagination } from "antd";
 import Filter from "../Filter/Filter";
 
 const TanksList = () => {
-  
   const { getTanks, tanks, total } = useContext(TanksContext);
   const [searchParams, setSearchParams] = useSearchParams();
-  const [type, setType]=useState([])
+  const [type, setType] = useState([]);
 
   const [search, setSearch] = useState(
     searchParams.get("q") ? searchParams.get("q") : ""
@@ -21,28 +20,28 @@ const TanksList = () => {
   const [limit, setLimit] = useState(
     searchParams.get("_limit") ? searchParams.get("_limit") : 9
   );
-  
-  useEffect(() => {
-      setSearchParams({
-          q: search,
-          _limit: limit,
-          _page: page,
-          type: type
-        });
-      }, []);
 
-      useEffect(() => {
-        getTanks();
-      }, [searchParams]);
-      
   useEffect(() => {
     setSearchParams({
       q: search,
       _limit: limit,
       _page: page,
-      type: type
+      type: type,
     });
-  }, [search,limit,page, type ]);
+  }, []);
+
+  useEffect(() => {
+    getTanks();
+  }, [searchParams]);
+
+  useEffect(() => {
+    setSearchParams({
+      q: search,
+      _limit: limit,
+      _page: page,
+      type: type,
+    });
+  }, [search, limit, page, type]);
 
   return (
     <div
@@ -60,13 +59,15 @@ const TanksList = () => {
           paddingLeft: "50px",
           paddingRight: "50px",
           marginBottom: "70px",
-          width: '100%',
-          display: 'flex',
-          justifyContent: 'space-between'
+          width: "100%",
+          display: "flex",
+          justifyContent: "space-between",
+          flexWrap: "wrap",
         }}
       >
-        <Input.Search
-          placeholder="Поиск по ключевым словам"
+        <Input
+          className="m-1"
+          placeholder="Поиск "
           enterButton="Search"
           size="large"
           style={{ width: "25vw" }}
@@ -74,16 +75,16 @@ const TanksList = () => {
           onChange={(e) => setSearch(e.target.value)}
         />
 
-        <Filter type={type} setType={setType}/>
+        <Filter type={type} setType={setType} />
       </div>
 
       <div
         className="d-flex justify-content-center flex-wrap"
         style={{ marginBottom: "100px" }}
       >
-        { tanks.map((item) => (
+        {tanks.map((item) => (
           <Tanks key={item.id} item={item} />
-          ))}
+        ))}
       </div>
 
       <div className="d-flex justify-content-center">

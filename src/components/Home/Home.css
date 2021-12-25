@@ -1,6 +1,5 @@
 .beginer{
     width: 100%;
-    height: 760px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -27,12 +26,11 @@ p{
 .word{
     margin-top: -1px ;
     background-image: url(https://ru-wotp.wgcdn.co/static/5.96.0_9090e7/wotp_static/img/about_game/frontend/scss/about-info/img/bg-d.webp);
-    background-size: 100%;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 1000px;
     
 }
 
@@ -92,7 +90,7 @@ p{
 }
 .item1{
     background-image: url(https://ru-wotp.wgcdn.co/static/5.96.0_9090e7/wotp_static/img/core/frontend/scss/common/blocks/about-technic/img/flags/ussr.webp);
-    background-size: 800px;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 .item2{
@@ -179,4 +177,72 @@ p{
     height: 100%;
     background-size: cover;
     background-image: url(https://ru-wotp.wgcdn.co/static/5.96.0_9090e7/wotp_static/img/core/frontend/scss/common/blocks/about-technic/img/tanks-bg/lighttank-d.webp);
+}
+
+@media all and (max-width: 1325px){
+    .beginer > p{
+        display: none;
+    }
+}
+@media all and (max-width: 1175px){
+    .word > h2{
+        font-size: 100px;
+    }
+}
+@media all and (max-width: 875px){
+    .word > h2{
+        font-size: 70px;
+    }
+}
+@media all and (max-width: 790px){
+    .nat{
+        font-size: 30px !important;
+    }
+}
+@media all and (max-width: 750px){
+    .desc{
+        font-size: 25px;
+    }
+}
+@media all and (max-width: 640px){
+    .word > h2{
+        font-size: 50px;
+    }
+    .kri{
+        font-size: 20px;
+    }
+    .kri-bottom{
+        font-size: 18px;
+    }
+    .desc{
+        font-size: 20px;
+    }
+}
+@media all and (max-width: 455px){
+    .word > h2{
+        font-size: 40px;
+    }
+}
+
+@media all and (max-width: 425px){
+    .word > h2{
+        font-size: 30px;
+    }
+    .kri{
+        font-size: 15px;
+    }
+    .kri-bottom{
+        font-size: 15px;
+    }
+    .desc{
+        font-size: 18px;
+    }
+}
+@media all and (max-width: 360px){
+    .desc{
+        display: none;
+    }
+    .before-scrin>p{
+        font-size: 20px;
+    }
 }

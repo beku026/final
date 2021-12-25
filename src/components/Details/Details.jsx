@@ -33,14 +33,17 @@ const Details = () => {
           <div
             style={{
               backgroundImage: `url(${tank.image})`,
-              height: "100%",
+              backgroundSize: 'cover',
+              // height: "100%",
               width: "100%",
               paddingTop: '100px',
-              paddingLeft: '180px' 
+              flexWrap: 'wrap',
+              display: 'flex',
+              justifyContent: "space-between",
+              alignItems: 'center'
             }}
-            className="d-flex justify-content-between align-items-center"
           >
-            <div style={{width:"30%"}}>
+            <div style={{width:"30%"}} className="solo">
               <h1 style={{ color: "white" }}>{tank.name}</h1>
               <div style={{ marginTop: "100px" }}>
                 <span style={{ color: "grey" }}>Тип: </span>
@@ -56,7 +59,8 @@ const Details = () => {
                 <span style={{ color: "red" }}> токенов</span>
               </div>
             </div>
-            <div
+            <div 
+            className="desc"
               style={{ width: "40%" }}
             >
               <p style={{ fontSize: "22px", color: "white" }}>

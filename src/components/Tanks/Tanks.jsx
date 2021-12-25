@@ -39,7 +39,7 @@ const Tanks = ({ item }) => {
   return (
     <>
       <div className="m-4 card">
-        <Card style={{ width: "24rem", border: "none" }}>
+        <Card className="card-inner" >
           <Card.Img variant="top" src={item.image} className="c" />
           <Card.Body>
             <Card.Title>{item.name}</Card.Title>

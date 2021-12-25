@@ -36,8 +36,7 @@ const Footer = () => {
       >
         <div>
           <h1
-            className="footer_text"
-            style={{ fontSize: "60px", marginBottom: "20px" }}
+            className="foot-h1"
           >
             World of Tanks в социальных сетях
           </h1>
@@ -46,8 +45,8 @@ const Footer = () => {
           </h3>
         </div>
         <div
-          className="d-flex justify-content-evenly"
-          style={{ width: "100%" }}
+          // className="d-flex justify-content-evenly"
+          style={{ width: "100%", display: 'flex', justifyContent: 'space-evenly', flexWrap: 'wrap'}}
         >
           <a
             href="http://forum.worldoftanks.ru/?link_place=wotp_link_footer&_ga=2.31626174.1831659555.1638703378-502968172.1638703378"

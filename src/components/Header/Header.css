@@ -48,4 +48,26 @@
     color: orange;
 }
 
+.icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media all and (max-width: 410px){
+    .div-reg{
+        width: 70px;
+    }
+}
 
+@media all and (max-width: 375px){
+    .logo{
+        width: 45px;
+    }
+    .shop-icon{
+        font-size: 30px;
+    }
+    .icons{
+        display: flex;
+        justify-content: flex-start;
+    }
+}

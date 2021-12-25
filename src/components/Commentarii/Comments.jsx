@@ -73,7 +73,7 @@ const Comments = ({ item, id }) => {
             <button
               style={{
                 height: "40px",
-                width: "5%",
+                width: "60px",
                 border: "none",
                 backgroundColor: "red",
                 color: "white",

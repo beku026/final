@@ -55,15 +55,6 @@
       "id": 7
     },
     {
-      "name": "СТ-II",
-      "type": "Тяжелый танк",
-      "country": "СССР",
-      "image": "//ru-wotp.wgcdn.co/dcont/tankopedia_images/r169_st_ii/r169_st_ii_image.png",
-      "price": "10000",
-      "description": "Проект тяжёлого танка со спаренной орудийной установкой, являющийся развитием проекта тяжёлого танка СТ-I. При сохранении габаритов и массы предполагалось вооружить его двумя орудиями калибра 100 или 122 мм. Существовал только в эскизных чертежах.",
-      "id": 8
-    },
-    {
       "name": "ОБЪЕКТ 279 РАННИЙ",
       "type": "Тяжелый танк",
       "country": "СССР",
@@ -392,6 +383,26 @@
       },
       "tankId": 16,
       "id": 15
+    },
+    {
+      "newComment": {
+        "word": "hi",
+        "createdAtMs": 1640442626000,
+        "tanksId": 11,
+        "email": "bakytairov@mail.ru"
+      },
+      "tankId": 11,
+      "id": 16
+    },
+    {
+      "newComment": {
+        "word": "hi",
+        "createdAtMs": 1640442626000,
+        "tanksId": 11,
+        "email": "bakytairov@mail.ru"
+      },
+      "tankId": 11,
+      "id": 17
     }
   ],
   "likes": [
@@ -400,6 +411,20 @@
       "productId": "16",
       "rate": 1,
       "id": 6
+    },
+    {
+      "rate": 1,
+      "id": 7
+    },
+    {
+      "rate": 1,
+      "id": 8
+    },
+    {
+      "owner": "bakytairov@mail.ru",
+      "productId": "11",
+      "rate": 1,
+      "id": 9
     }
   ]
 }

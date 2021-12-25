@@ -61,6 +61,7 @@ const Add = () => {
           marginTop: "120px",
           marginBottom: "100px",
           backgroundColor: "rgba(0,0,0,0.4)",
+          minWidth: '320px'
         }}
         className="col-4 d-flex flex-column align-items-center"
       >
@@ -118,7 +119,7 @@ const Add = () => {
           style={{
             background: "orangered",
             color: "white",
-            fontSize: "25px",
+            fontSize: "20px",
             fontWeight: "500",
           }}
           className="btn m-3 col-5"
