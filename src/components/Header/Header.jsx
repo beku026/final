@@ -67,7 +67,7 @@ const Header = () => {
             }
             to="/tanks"
           >
-            <TANKS></TANKS>
+            TANKS
           </Link>
         </div>
 

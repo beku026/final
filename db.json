@@ -403,6 +403,26 @@
       },
       "tankId": 11,
       "id": 17
+    },
+    {
+      "newComment": {
+        "word": "салам алейкум",
+        "createdAtMs": 1640449635859,
+        "tanksId": 11,
+        "email": "tarieltairov1@gmail.com"
+      },
+      "tankId": 11,
+      "id": 18
+    },
+    {
+      "newComment": {
+        "word": "рудщ",
+        "createdAtMs": 1640449654325,
+        "tanksId": 11,
+        "email": "tarieltairov1@gmail.com"
+      },
+      "tankId": 11,
+      "id": 19
     }
   ],
   "likes": [
@@ -425,6 +445,12 @@
       "productId": "11",
       "rate": 1,
       "id": 9
+    },
+    {
+      "owner": "tarieltairov1@gmail.com",
+      "productId": "11",
+      "rate": 1,
+      "id": 10
     }
   ]
 }
