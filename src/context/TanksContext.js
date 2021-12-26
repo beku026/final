@@ -3,7 +3,7 @@ import React, { useReducer } from "react";
 
 export const TanksContext = React.createContext()
 
-const API = "https://project-wot.herokuapp.com/apitanks"
+const API = "http://localhost:8000/apitanks"
 
 const INIT_STATE = {
     tanks: [],

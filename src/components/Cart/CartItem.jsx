@@ -38,7 +38,6 @@ const CartItem = ({ item }) => {
                 justifyContent: "space-between",
                 width: "100%",
                 marginTop: "20px",
-                // flexW
               }}
             >
               <div>

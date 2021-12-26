@@ -423,6 +423,26 @@
       },
       "tankId": 11,
       "id": 19
+    },
+    {
+      "newComment": {
+        "word": "фв",
+        "createdAtMs": 1640464095062,
+        "tanksId": 16,
+        "email": "akybek01@gmail.com"
+      },
+      "tankId": 16,
+      "id": 20
+    },
+    {
+      "newComment": {
+        "word": "TUGYBIHUNJO",
+        "createdAtMs": 1640489427722,
+        "tanksId": 25,
+        "email": "akybek01@gmail.com"
+      },
+      "tankId": 25,
+      "id": 21
     }
   ],
   "apilikes": [
@@ -451,6 +471,30 @@
       "productId": "11",
       "rate": 1,
       "id": 10
+    },
+    {
+      "owner": "tarieltairov1@gmail.com",
+      "productId": "10",
+      "rate": 1,
+      "id": 11
+    },
+    {
+      "owner": "akybek01@gmail.com",
+      "productId": "10",
+      "rate": 0,
+      "id": 12
+    },
+    {
+      "owner": "tarieltairov1@gmail.com",
+      "productId": "25",
+      "rate": 1,
+      "id": 13
+    },
+    {
+      "owner": "akybek01@gmail.com",
+      "productId": "25",
+      "rate": 1,
+      "id": 14
     }
   ]
 }
