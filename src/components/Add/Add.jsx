@@ -5,44 +5,44 @@ import { useNavigate } from "react-router-dom";
 
 const Add = () => {
 
-  const navigate = useNavigate();
-  
-  const [newTank, setNewTank] = useState({
-    name: "",
-    type: "",
-    country: "",
-    image: "",
-    price: "",
-    description: "",
-    comments: "",
-  });
+const navigate = useNavigate();
 
-  const { createTank } = useContext(TanksContext);
+const [newTank, setNewTank] = useState({
+  name: "",
+  type: "",
+  country: "",
+  image: "",
+  price: "",
+  description: "",
+  comments: "",
+});
 
-  function handleValues(e) {
-    let values = {
-      ...newTank,
-      [e.target.name]: e.target.value,
-    };
-    setNewTank(values);
+const { createTank } = useContext(TanksContext);
+
+function handleValues(e) {
+  let values = {
+    ...newTank,
+    [e.target.name]: e.target.value,
+  };
+  setNewTank(values);
+}
+
+function checkValues() {
+  if (
+    !newTank.name ||
+    !newTank.type ||
+    !newTank.image ||
+    !newTank.country ||
+    !newTank.price ||
+    !newTank.description
+  ) {
+    alert("Заполните поля!");
+    return;
+  } else {
+    createTank(newTank);
+    navigate("/tanks");
   }
-
-  function checkValues() {
-    if (
-      !newTank.name ||
-      !newTank.type ||
-      !newTank.image ||
-      !newTank.country ||
-      !newTank.price ||
-      !newTank.description
-    ) {
-      alert("Заполните поля!");
-      return;
-    } else {
-      createTank(newTank);
-      navigate("/tanks");
-    }
-  }
+}
 
   return (
     <div

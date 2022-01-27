@@ -52,7 +52,7 @@ const Edit = () => {
     return (
         <>
         {edited? <div style={{backgroundImage: 'url(https://izaktv.pl/wp-content/uploads/2020/06/WoT_PC_Key_art_1.9.1_Berlin_map.jpg)', backgroundSize: 'cover', backgroundAttachment: 'fixed'}} className="d-flex justify-content-center align-items-center" >
-        <div style={{border: 'grey solid 4px', borderRadius: '5%', marginTop: "120px", marginBottom: '100px', minWidth: '320px', backgroundColor: "rgba(0,0,0,0.4)", textAlign: 'center'}} className="col-4 d-flex flex-column align-items-center">
+        <div style={{border: 'grey solid 4px', borderRadius: '5%', marginTop: "120px", marginBottom: '100px', minWidth: '320px', backgroundColor: "rgba(0,0,0,0.4)", textAlign: 'center', display: "flex"}} className="col-4 d-flex flex-column align-items-center">
             <h3 style={{color:'orangered'}}>Форма для редактирования</h3>
             <input value={edited.name} onChange={handleValues} style={{height: '40px'}} type="text" placeholder="Введите имя" name="name" className="m-3 col-9"/>
             <input value={edited.type} onChange={handleValues} style={{height: '40px'}} type="text" placeholder="Введите тип" name="type" className="m-3 col-9"/>

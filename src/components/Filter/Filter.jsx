@@ -2,11 +2,14 @@ import { Select } from "antd";
 import React, { useContext, useEffect } from "react";
 import { TanksContext } from "../../context/TanksContext";
 const { Option } = Select;
+
 const Filter = ({ type, setType }) => {
+
   const { getTanks, tanks } = useContext(TanksContext);
   useEffect(() => {
     getTanks();
   }, []);
+  
   return (
     <Select
       className="m-1"

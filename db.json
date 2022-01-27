@@ -251,6 +251,16 @@
       "price": "8000",
       "description": "Американская САУ, разработанная в 1945 году на базе танка Т26Е3 для разрушения бункеров и глубоких укрытий в боях с японскими войсками на островах Тихого океана. Было построено пять машин, включая опытный образец. Впоследствии работы над САУ были прекращены в связи с окончанием войны.",
       "id": 33
+    },
+    {
+      "name": "Тапок",
+      "type": "ТТ",
+      "country": "Германия",
+      "image": "https://ru-wotp.wgcdn.co/dcont/tankopedia_images/r52_object_261/r52_object_261_image.png",
+      "price": "1500000",
+      "description": "Разработка тяжёлой самоходной артиллерийской установки на базе тяжёлого танка ИС-7 велась в 1947 году. Предполагалось вооружить САУ мощной 180-мм морской пушкой. Однако в дальнейшем все работы по проекту были прекращены.",
+      "comments": "",
+      "id": 34
     }
   ],
   "apicomments": [
@@ -416,16 +426,6 @@
     },
     {
       "newComment": {
-        "word": "рудщ",
-        "createdAtMs": 1640449654325,
-        "tanksId": 11,
-        "email": "tarieltairov1@gmail.com"
-      },
-      "tankId": 11,
-      "id": 19
-    },
-    {
-      "newComment": {
         "word": "фв",
         "createdAtMs": 1640464095062,
         "tanksId": 16,
@@ -443,6 +443,26 @@
       },
       "tankId": 25,
       "id": 21
+    },
+    {
+      "newComment": {
+        "word": "tariel",
+        "createdAtMs": 1640578944080,
+        "tanksId": 16,
+        "email": "tarieltairov1@gmail.com"
+      },
+      "tankId": 16,
+      "id": 22
+    },
+    {
+      "newComment": {
+        "word": "the best tank",
+        "createdAtMs": 1643259824269,
+        "tanksId": 11,
+        "email": "tarieltairov1@gmail.com"
+      },
+      "tankId": 11,
+      "id": 23
     }
   ],
   "apilikes": [
